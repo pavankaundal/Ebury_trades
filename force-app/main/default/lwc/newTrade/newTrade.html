@@ -1,0 +1,18 @@
+<template>
+    <lightning-combobox
+            name="Sell"
+            label="Sell Currency"
+            value={valueSell}
+            placeholder="--Select Currency--"
+            options={options}
+            onchange={handleChangeSell} ></lightning-combobox>
+
+            <lightning-combobox
+            name="Buy"
+            label="Buy Currency"
+            value={valueBuy}
+            placeholder="--Select Currency--"
+            options={options}
+            onchange={handleChangeBuy} 
+            ></lightning-combobox>
+</template>

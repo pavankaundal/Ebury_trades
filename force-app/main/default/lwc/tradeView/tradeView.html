@@ -1,0 +1,23 @@
+<template>
+	<lightning-card icon-name="action:new_note">
+		<div class="slds-var-m-around_medium">
+            <template if:true={trade}>
+                <lightning-record-view-form record-id={recordId} object-api-name="Trade__c">
+                    <div class="slds-box">
+                       <lightning-output-field field-name="ID__c"></lightning-output-field>
+                        <lightning-output-field field-name="Sell_Currency__c"></lightning-output-field>
+                        <lightning-output-field field-name="Sell_Amount__c"></lightning-output-field>
+                        <lightning-output-field field-name="Buy_Currency__c"></lightning-output-field>
+                        <lightning-output-field field-name="Buy_Amount__c"></lightning-output-field>
+                        <lightning-output-field field-name="Rate__c"></lightning-output-field>
+                        <lightning-output-field field-name="Date_Booked__c"></lightning-output-field>
+                    </div>
+                </lightning-record-view-form>
+            </template> 
+    </div>
+	</lightning-card>
+    <lightning-button class="slds-m-around_medium" label="New" onclick={showNewTrade}></lightning-button>
+    <div class="slds-modal__container">
+        <c-new-Trade if:true={showTradeComponent}></c-new-Trade>
+    </div>
+</template>
